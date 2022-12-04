@@ -1,0 +1,16 @@
+<h2>Редагування багажу</h2>
+<%= form_for :item, url: item_path(@item), method: :patch do |f| %>
+  <p>
+    Кількість <br>
+    <%= f.text_field(:amount, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    Вага <br>
+    <%= f.text_field(:weight, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-success'}) %>
+  </p>
+<% end %>

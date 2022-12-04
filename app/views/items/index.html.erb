@@ -1,0 +1,8 @@
+<h1>Весь багаж</h1>
+<% @items.each do |item| %>
+  <hr>
+  <p>Кількість: <%= item.amount %></p>
+  <p>Вага: <%= item.weight %></p>
+  <%= link_to "Редагувати", edit_item_path(item), :class => 'btn btn-warning mb-2' %>
+  <%= button_to "Видалити", item_path(item), method: :delete, :class => 'btn btn-danger' %>
+<% end %>
